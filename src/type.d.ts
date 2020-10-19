@@ -4,3 +4,12 @@ class ListNode<T = number> {
     next: ListNode<T> | null
     constructor(val?: number, next?: ListNode | null)
 }
+
+
+class Node<T = number> {
+    val: T
+    left: Node<T> | null
+    right: Node<T> | null
+    next: Node<T> | null
+    constructor(val?: T, left?: Node<T>, right?: Node<T>, next?: Node<T>)
+}
