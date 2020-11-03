@@ -13,3 +13,10 @@ class Node<T = number> {
     next: Node<T> | null
     constructor(val?: T, left?: Node<T>, right?: Node<T>, next?: Node<T>)
 }
+
+class TreeNode<T = number> {
+    val: T
+    left: TreeNode<T> | null
+    right: TreeNode<T> | null
+    constructor(val?: T, left?: TreeNode<T>, right?: TreeNode<T>)
+}
