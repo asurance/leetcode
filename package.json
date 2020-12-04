@@ -1,23 +1,46 @@
 {
-    "name": "screeps-ai",
+    "name": "leetcode",
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "test": "jest src/test.ts --coverage"
+        "test": "nyc mocha"
+    },
+    "nyc": {
+        "extension": [
+            ".ts",
+            ".tsx"
+        ],
+        "exclude": [
+            "**/*.d.ts"
+        ],
+        "reporter": [
+            "text"
+        ]
     },
     "devDependencies": {
-        "@babel/core": "^7.12.7",
-        "@babel/preset-env": "^7.12.7",
-        "@babel/preset-typescript": "^7.12.7",
-        "@types/jest": "^26.0.15",
+        "@types/chai": "^4.2.14",
+        "@types/mocha": "^8.0.4",
         "@types/node": "^14.10.1",
         "@typescript-eslint/eslint-plugin": "^4.1.1",
         "@typescript-eslint/parser": "^4.1.1",
-        "babel-jest": "^26.6.3",
+        "chai": "^4.2.0",
         "eslint": "^7.9.0",
-        "jest": "^26.6.3",
+        "mocha": "^8.2.1",
+        "nyc": "^15.1.0",
         "rimraf": "^3.0.2",
-        "ts-node": "^9.0.0",
+        "ts-node": "^9.1.0",
         "typescript": "^4.0.2"
+    },
+    "mocha": {
+        "spec": [
+            "src/test.ts"
+        ],
+        "extension": [
+            "ts"
+        ],
+        "recursive": true,
+        "require": [
+            "ts-node/register"
+        ]
     }
 }
